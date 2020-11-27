@@ -14,6 +14,7 @@ java {
 
 extraJavaModuleInfo {
     module("gradle-tooling-api-6.8-rc-1.jar", "org.gradle.tooling", "6.8-rc-1") {
+        requires("org.slf4j")
         exports("org.gradle.tooling")
         exports("org.gradle.tooling.model")
     }
@@ -25,4 +26,5 @@ dependencies {
 
 application {
     mainClass.set("tapi.as.module.App")
+    mainModule.set("tapi.as.module.app")
 }
